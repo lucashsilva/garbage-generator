@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <Compile Remove="GarbageGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="GCI">
+      <HintPath>.\lib\GCI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

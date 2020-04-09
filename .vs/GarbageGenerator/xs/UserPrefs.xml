@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{9F9E9E16-6755-4D6E-B74B-644AAE5C1C00}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GarbageGenerator/appsettings.json">
+    <Files>
+      <File FileName="GarbageGenerator/appsettings.json" Line="1" Column="1" />
+      <File FileName="GarbageGenerator/appsettings.Development.json" />
+      <File FileName="GarbageGenerator/Program.cs" />
+      <File FileName="GarbageGenerator/GarbageGenerator.cs" />
+      <File FileName="GarbageGenerator/Properties/launchSettings.json" />
+      <File FileName="GarbageGenerator/Startup.cs" Line="26" Column="32" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GarbageGenerator" expanded="True">
+            <Node name="GarbageGenerator" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" expanded="True" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.GarbageGenerator PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
