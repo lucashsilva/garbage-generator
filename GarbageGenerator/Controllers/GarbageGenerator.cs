@@ -20,7 +20,7 @@ namespace GarbageGenerator.Controllers
         public IActionResult Post()
         {
             Console.WriteLine(Environment.GetEnvironmentVariable("name"));
-            var size = Math.Pow(2, Int32.Parse(Environment.GetEnvironmentVariable("to_power_of")));
+            var size = Math.Pow(2, 20);
             var list = new List<Double>();
 
             for (int i = 0; i < size; i++)
