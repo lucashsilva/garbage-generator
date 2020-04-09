@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -19,9 +19,8 @@ namespace GarbageGenerator.Controllers
         [HttpPost]
         public IActionResult Post()
         {
-            Console.WriteLine(Environment.GetEnvironmentVariable("name"));
-            var size = Math.Pow(2, 20);
-            var list = new List<Double>();
+            var size = Math.Pow(2, 22);
+            Collection<int> list = new Collection<int>();
 
             for (int i = 0; i < size; i++)
             {
