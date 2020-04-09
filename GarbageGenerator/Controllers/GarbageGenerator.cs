@@ -19,7 +19,8 @@ namespace GarbageGenerator.Controllers
         [HttpPost]
         public IActionResult Post()
         {
-            var size = Math.Pow(2, 20);
+            Console.WriteLine(Environment.GetEnvironmentVariable("name"));
+            var size = Math.Pow(2, Int32.Parse(Environment.GetEnvironmentVariable("to_power_of")));
             var list = new List<Double>();
 
             for (int i = 0; i < size; i++)
