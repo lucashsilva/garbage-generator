@@ -19,7 +19,7 @@ namespace GarbageGenerator.Controllers
         [HttpPost]
         public IActionResult Post()
         {
-            var size = Math.Pow(2, 22);
+            var size = Math.Pow(2, 20);
             Collection<int> list = new Collection<int>();
 
             for (int i = 0; i < size; i++)
