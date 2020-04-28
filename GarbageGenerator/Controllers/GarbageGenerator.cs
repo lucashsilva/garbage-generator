@@ -16,10 +16,10 @@ namespace GarbageGenerator.Controllers
             _logger = logger;
         }
 
-        [HttpPost]
+        [HttpGet]
         public IActionResult Post()
         {
-            var size = Math.Pow(2, 21);
+            var size = Math.Pow(2, Int32.Parse(Environment.GetEnvironmentVariable("TO_POWER_OF")));
             Collection<int> list = new Collection<int>();
 
             for (int i = 0; i < size; i++)
