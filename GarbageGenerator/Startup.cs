@@ -49,6 +49,8 @@ namespace GarbageGenerator
             {
                 endpoints.MapControllers();
             });
+
+            Console.WriteLine("Server GC Enabled: " + System.Runtime.GCSettings.IsServerGC);
         }
     }
 }
