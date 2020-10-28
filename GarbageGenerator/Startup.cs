@@ -32,6 +32,8 @@ namespace GarbageGenerator
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            GC.TryStartNoGCRegion(128000000);
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

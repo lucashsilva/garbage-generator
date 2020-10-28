@@ -14,7 +14,6 @@ namespace GarbageGenerator.Controllers
         public GarbageGeneratorController(ILogger<GarbageGeneratorController> logger)
         {
             _logger = logger;
-            GC.TryStartNoGCRegion(Int32.Parse(Environment.GetEnvironmentVariable("HEAP_SIZE")));
         }
 
         [HttpGet]
