@@ -32,7 +32,11 @@ namespace GarbageGenerator
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            GC.TryStartNoGCRegion(128000000);
+            if (Environment.GetEnvironmentVariable("USE_GCI") != null && Boolean.Parse(Environment.GetEnvironmentVariable("USE_GCI")))
+            {
+                GC.TryStartNoGCRegion(Int32.Parse(Environment.GetEnvironmentVariable("HEAP_SIZE")));
+                app.UseMiddleware<GCIMiddleware>();
+            }
 
             if (env.IsDevelopment())
             {
@@ -44,8 +48,6 @@ namespace GarbageGenerator
             app.UseRouting();
 
             app.UseAuthorization();
-
-            app.UseMiddleware<GCIMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
