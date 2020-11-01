@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -9,7 +9,7 @@ namespace GarbageGenerator.Controllers
     public class GarbageGeneratorController : ControllerBase
     {
         private readonly ILogger<GarbageGeneratorController> _logger;
-        private byte[][] buffer;
+        private static byte[][] buffer;
         private static int msgCount;
         private static int MSG_SIZE;
         private static int WINDOW_SIZE;
@@ -26,6 +26,15 @@ namespace GarbageGenerator.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            try
+            {
+                GC.TryStartNoGCRegion(Int32.Parse(Environment.GetEnvironmentVariable("HEAP_SIZE")));
+            }
+            catch (InvalidOperationException e)
+            {
+                // already in no gc region
+            }
+
             byte[] byteArray = new byte[MSG_SIZE];
 
             for (int i = 0; i < MSG_SIZE; i++)
